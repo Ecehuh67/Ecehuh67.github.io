@@ -377,6 +377,7 @@ main {
 .main__pick-up {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 35px 20px;
   box-sizing: border-box;
@@ -385,7 +386,7 @@ main {
   display: flex;
   position: relative;
   margin-bottom: 45px;
-  width: 50%;
+  width: 48%;
 }
 .pick-up-form__field-wrapper::before {
   position: absolute;
@@ -404,6 +405,9 @@ main {
 }
 .pick-up-form__field-wrapper:nth-of-type(4)::before {
   content: 'Comments';
+}
+.pick-up-form__field:focus {
+  outline: 1px solid black;
 }
 .pick-up-form__field-wrapper:nth-of-type(3),
 .pick-up-form__field-wrapper:nth-of-type(4) {
@@ -435,15 +439,9 @@ main {
   box-sizing: border-box;
   flex-grow: 1;
 }
-.pick-up-form__field--phone {
-  margin-right: 12x;
-}
 .pick-up-form__field--comments {
   padding: 10px;
   height: 100px;
-}
-.pick-up-form__field--name {
-  margin-right: 12px;
 }
 .pick-up-form__field-submit {
   position: absolute;
@@ -548,7 +546,7 @@ main {
     width: 1100px;
   }
   .pick-up-form__field-wrapper {
-    width: 50%;
+    width: 47%;
   }
   .pick-up-form__field-wrapper:nth-of-type(3),
   .pick-up-form__field-wrapper:nth-of-type(4) {
@@ -572,6 +570,10 @@ main {
     width: 30%;
     height: 50px;
   }
+  .pick-up-form__error-icon {
+    right: 10px;
+    top: 20px;
+  }
 }
 .main__form-wrapper {
   width: 100%;
@@ -590,6 +592,22 @@ main {
 }
 .points-list__item > input {
   margin-right: 10px;
+  cursor: pointer;
+}
+.points-list__item > label {
+  cursor: pointer;
+}
+.points-list__item:hover {
+  color: blue;
+}
+@media (min-width: 1440px) {
+  .main__form-points-list {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  .points-list__item {
+    margin-right: 20px;
+  }
 }
 
 
